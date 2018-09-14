@@ -1,0 +1,26 @@
+<h2>Edita el libro {{title}}</h2>
+
+<form action="/books/edit/{{_id}}" method="post">
+  <p>
+    <label for="title">Nombre del Libro:</label>
+    <input type="text" name="title" placeholder="El libro vaquero" id="title" value="{{title}}">
+  </p>
+  <p>
+    <label for="author">Autor:</label>
+  <input id="author" type="text" name="author" placeholder="Oswaldinho" value="{{author}}">
+  </p>
+
+  <p>
+    <label for="description">DEscripción</label>
+    <textarea id="description" type="text" name="description" placeholder="esta buenisimo">
+      {{description}}
+    </textarea>
+  </p>
+
+  <p>
+    <label for="rating">Rating:</label>
+    <input id="rating" type="number" name="rating" placeholder="1000" value="{{rating}}">
+  </p>
+
+  <input type="submit" value="guardar">
+</form>
