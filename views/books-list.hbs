@@ -1,0 +1,14 @@
+<div>
+
+  <form action="">
+    <input type="text" name="search">
+    <input type="submit" value="buscale paps">
+  </form>
+
+  
+  {{#each books}}
+    <p>
+      <a href="/books/detail/{{this._id}}">{{this.title}}</a>
+    </p>
+  {{/each}}
+</div>
