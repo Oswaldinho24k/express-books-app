@@ -5,7 +5,13 @@ const bookSchema = new Schema({
   title: String,
   description: String,
   author: String,
-  rating: Number
+  rating: Number,
+  reviews:[
+    {
+      type:Schema.Types.ObjectId,
+      ref:'Review'
+    }
+  ]
 },{
   timestamps:{
     createdAt:"created_at",

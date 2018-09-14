@@ -55,6 +55,8 @@ const index = require('./routes/index');
 app.use('/', index);
 const books = require('./routes/books')
 app.use('/books', books)
+const reviews = require('./routes/reviews')
+app.use('/reviews', reviews)
 
 
 module.exports = app;

@@ -4,7 +4,21 @@
   <p>{{description}}</p>
   <h5>{{rating}}</h5>
 
+  
+
+  <a href="/reviews/new/{{_id}}">
+    Critica el libro
+  </a>
+
   <a href="/books/edit/{{_id}}">
     <button>Editar</button>
   </a>
+
+  <hr>
+  <h3>Reviews de este libro:</h3>
+
+  {{#each reviews}}
+    <p>{{this.author}} dice: {{this.texto}}</p>
+  {{/each}}
+
 </div>

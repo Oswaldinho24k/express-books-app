@@ -24,7 +24,9 @@ router.get('/', (req, res, next)=>{
 router.get('/detail/:id',(req, res, next)=>{
   const {id} = req.params
   Book.findById(id)
+    .populate('reviews')
     .then(book=>{
+      console.log(book)
       res.render('book-detail',book)
     }).catch(e=>{
       console.log(e)
